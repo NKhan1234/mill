@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: aliceblue;
+  color: black;
+}
+/* .hero {
+  background-image: url("/mill1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+.btn {
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+.btn:hover {
+  background-color: white;
+  color: black;
+}
+.btn5 {
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+.btn5:hover {
+  background-color: rgb(225, 68, 68);
+  color: rgb(255, 255, 255);
+}
+.btn1 {
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+.btn1:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(184, 69, 69);
+}
+.btn8 {
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+.btn8:hover {
+  background-color: white;
+  color: rgb(249, 1, 1);
+}
+.btn6 {
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+.btn6:hover {
+  background-color: white;
+  color: red;
+  font-weight: 400;
+}
+.navbar {
+  background-color: white;
+  color: red;
+}
