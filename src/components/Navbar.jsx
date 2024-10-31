@@ -49,7 +49,7 @@ export default function Navbar() {
     >
       <div className="">
         <h1 className="logo text-3xl font-semibold tracking-wide">
-          Tiwana Rice Mill
+          Durga Enterprises
         </h1>
       </div>
       <div className="nav flex items-center justify-between gap-x-8">

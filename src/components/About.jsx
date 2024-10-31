@@ -71,7 +71,7 @@ export default function About() {
           </div>
           <button
             onClick={handleMore}
-            className="btn1 inline-block w-[15%] m-auto px-8 py-4 outline-none border-none bg-red-400 text-white text-lg"
+            className="btn1 inline w-[15%] m-auto px-8 py-4 outline-none border-none bg-red-400 text-white text-md"
           >
             {showmore ? "Show Less" : "Know More"}
           </button>
