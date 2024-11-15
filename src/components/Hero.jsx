@@ -34,12 +34,12 @@ export default function Hero() {
       });
   });
   return (
-    <div className="hero w-full h-screen px-[10%] py-[30px] flex items-center justify-center flex-col">
+    <div className="hero bg-stone-400 w-full h-full px-[5%] py-[40px] sm:px-[10%] sm:py-[100px] flex items-center justify-center flex-col">
       <div className="home">
-        <h1 className="text-5xl font-semibold tracking-wide pb-6 leading-14">
+        <h1 className="text-2xl font-semibold sm:text-3xl font-semibold md:text-5xl font-bold tracking-wide pb-6 leading-14">
           Delivering <br /> Trust and Quality <br /> for Over a Century
         </h1>
-        <p className="text-lg">
+        <p className="text-sm sm:text-md md:text-lg">
           Founded on precision and quality, our rice mill combines
           state-of-the-art technology with years of expertise to deliver
           premium, perfectly milled rice. Committed to excellence from sourcing
@@ -47,9 +47,6 @@ export default function Hero() {
           purity, taste, and quality, supporting both local farmers and global
           consumers.
         </p>
-        <button className="btn mt-4 inline-block w-[12%] flex items-center justify-center  px-8 py-4 bg-red-500 text-md  text-white text-md font-semibold tracking-wide">
-          Explore
-        </button>
       </div>
     </div>
   );

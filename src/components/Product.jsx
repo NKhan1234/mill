@@ -1,12 +1,13 @@
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Link } from "react-router-dom";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Product() {
   const tl = gsap.timeline();
   useGSAP(() => {
-    tl.from(".product-h1", {
+    tl.from(".product-h1-h1", {
       x: -40,
       y: 40,
       opacity: 0,
@@ -70,65 +71,41 @@ export default function Product() {
   });
   return (
     <>
-      <div className="product w-full h-full bg-red-200 px-[10%] py-[120px]">
-        <div className="mb-6">
-          <h1 className="product-h1 text-center text-4xl font-semibold tracking-wide text-black">
+      <div className="product w-full h-full bg-stone-500 px-[5%] py-[50px] md:px-[10%]  md:py-[90px]">
+        <div className="mb-10">
+          <h1 className="product-h1-h1 text-center text-2xl font-semibold md:text-4xl font-bold tracking-wide text-white">
             OUR PRODUCTS
           </h1>
         </div>
         <div className="product-sec grid justify-center  gap-y-8">
-          <div className="product-sec1 bg-white flex justify-between px-8 gap-x-36 py-6 w-auto">
-            <img
-              src="https://www.skrmindia.com/images/Brown-Rice-%20skrm.jpg"
-              alt=""
-              className="w-[500px] h-[300px]"
-            />
+          <div className="product-sec1 bg-white flex justify-center px-8 gap-x-36 py-6 ">
             <div className="">
-              <h1 className="text-5xl">Brown Rice</h1>
-              <button className="btn6 mt-8 px-8 py-4 outline-none border-none bg-red-600 text-white flex items-center justify-center text-xl">
-                Know More
-              </button>
+              <h1 className="text-xl sm:text-3xl md:text-5xl">Brown Rice</h1>
             </div>
           </div>
           <div className="product-sec2 bg-white flex justify-between px-8 gap-x-36 py-6 w-auto">
             <div className="">
-              <h1 className="text-5xl">White Rice</h1>
-              <button className="btn6 mt-8 px-8 py-4 outline-none border-none bg-red-600 text-white flex items-center justify-center text-xl">
-                Know More
-              </button>
+              <h1 className="text-xl sm:text-3xl md:text-5xl">White Rice</h1>
             </div>
-            <img
-              src="https://www.skrmindia.com/images/Raw-Rice-%20skrm.jpg"
-              alt=""
-              className="w-[500px] h-[300px]"
-            />
           </div>
           <div className="product-sec3 bg-white flex justify-between gap-x-36 px-8 py-6 w-auto">
-            <img
-              src="https://www.skrmindia.com/images/Steam-Rice-%20skrm.jpg"
-              alt=""
-              className="w-[500px] h-[300px]"
-            />
             <div className="">
-              <h1 className="text-5xl">Steam Rice</h1>
-              <button className="btn6 mt-8 px-8 py-4 outline-none border-none bg-red-600 text-white flex items-center justify-center text-xl">
-                Know More
-              </button>
+              <h1 className="text-xl sm:text-3xl md:text-5xl">Steam Rice</h1>
             </div>
           </div>
           <div className="product-sec4 bg-white flex justify-between gap-x-36 px-8 py-6 w-auto">
-            <div className="">
-              <h1 className="text-5xl">Parboiled Rice</h1>
-              <button className="btn6 mt-6 px-8 py-4 text-xl font-semibold outline-none border-none bg-red-600 text-white flex items-center justify-center ">
-                Know More
-              </button>
+            <div className="flex items-center justify-center">
+              <h1 className="text-xl sm:text-3xl md:text-5xl">
+                Parboiled Rice
+              </h1>
             </div>
-            <img
-              src="https://www.skrmindia.com/images/Parboiled-Rice-%20skrm.jpg"
-              alt=""
-              className="w-[500px] h-[300px]"
-            />
           </div>
+          <Link
+            to="/product"
+            className="btn6 mt-6 inline flex items-center justify-center px-8 py-4 text-xl font-semibold outline-none border-none bg-red-700 text-white"
+          >
+            Know More
+          </Link>
         </div>
       </div>
     </>

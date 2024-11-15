@@ -54,8 +54,9 @@ export default function Why() {
   }
   const tl = gsap.timeline();
   useGSAP(() => {
-    tl.from(".why-h1", {
+    tl.from(".why-h1-h1", {
       x: -40,
+      y: 40,
       duration: 1.5,
       opacity: 0,
       ease: "power1.inOut",
@@ -97,32 +98,34 @@ export default function Why() {
   });
   return (
     <>
-      <div className="w-full h-full px-[10%] py-[100px]">
+      <div className="why w-full h-full px-[5%] py-[50px] md:px-[10%] md:py-[70px]">
         <div className="text-center">
-          <h1 className="why-h1 text-4xl font-semibold tracking-wide">
+          <h1 className="why-h1-h1 text-2xl semibold sm:text-3xl md:text-4xl font-bold tracking-wide">
             Why Us
           </h1>
         </div>
         <div className="relative grid items-center justify-center mt-8">
-          <div className="why-content bg-white text-black px-16 py-12 rounded-md text-center h-full">
-            <h1 className="text-3xl font-medium">{whyUs[currentIndex].icon}</h1>
-            <h2 className="text-2xl font-semibold ">
+          <div className="why-content bg-white text-black px-8 py-6  md:px-16 md:py-12 rounded-md text-center h-full">
+            <h1 className="text-lg sm:text-xl md:text-3xl font-medium">
+              {whyUs[currentIndex].icon}
+            </h1>
+            <h2 className="text-lg sm:text-xl md:text-2xl font-semibold ">
               {whyUs[currentIndex].heading}
             </h2>
-            <p>{whyUs[currentIndex].detail}</p>
+            <p className="text-sm md:text-md">{whyUs[currentIndex].detail}</p>
           </div>
           <div className="why-p flex justify-between mt-4">
             <p
               onClick={handlePrev}
-              className="absolute top-[35%] left-6 cursor-pointer"
+              className="absolute top-full left-[30%] sm:left-[40%] cursor-pointer"
             >
-              <i className="ri-arrow-left-s-line w-[30px] h-[30px] bg-black text-white p-3 rounded-full text-lg"></i>
+              <i className="ri-arrow-left-s-line w-[25px] h-[25px] p-2 sm:w-[30px] sm:h-[30px] bg-black text-white sm:p-3 rounded-full text-md md:text-lg"></i>
             </p>
             <p
               onClick={handleNext}
-              className=" absolute top-[35%] right-6 cursor-pointer"
+              className=" absolute top-full right-[30%] sm:right-[40%] cursor-pointer"
             >
-              <i className="ri-arrow-right-s-line w-[30px] h-[30px] bg-black text-white p-3 rounded-full text-lg"></i>
+              <i className="ri-arrow-right-s-line w-[25px] h-[25px] p-2 sm:w-[30px] sm:h-[30px] bg-black text-white sm:p-3 rounded-full text-md md:text-lg"></i>
             </p>
           </div>
         </div>

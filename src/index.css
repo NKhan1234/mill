@@ -5,13 +5,12 @@
 body {
   background-color: aliceblue;
   color: black;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
-/* .hero {
-  background-image: url("/mill1.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-} */
+
 .btn {
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
@@ -33,6 +32,20 @@ body {
   background-color: rgb(255, 255, 255);
   color: rgb(184, 69, 69);
 }
+.btn12 {
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+.btn12:hover {
+  background-color: rgb(49, 49, 49);
+  color: rgb(255, 255, 255);
+}
+.social {
+  transition: background-color 0.3s ease-in-out, color 0.4s ease-in-out;
+}
+.social:hover {
+  background-color: rgb(255, 255, 255);
+  color: red;
+}
 .btn8 {
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
@@ -48,7 +61,84 @@ body {
   color: red;
   font-weight: 400;
 }
-.navbar {
-  background-color: white;
-  color: red;
+#upper {
+  transition: transform 0.3s ease-out;
 }
+#upper:hover {
+  transform: translateY(-10px);
+}
+.navbar {
+  padding: 20px 3%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.nav a {
+  position: relative;
+  width: max-content;
+}
+.nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  height: 0;
+  width: 100%;
+  margin: auto;
+  left: 0;
+  background-color: rgb(255, 3, 3);
+  transition: 0.2s ease-in-out;
+}
+.nav a:hover::after {
+  height: 3px;
+}
+
+.footer {
+  background: linear-gradient(rgba(36, 1, 1, 0.774), rgba(32, 4, 4, 0.733)),
+    url("/footer-crop.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.product-h1 {
+  background: linear-gradient(rgba(36, 1, 1, 0.774), rgba(32, 4, 4, 0.733)),
+    url("/product-crop.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.about-h1 {
+  background: linear-gradient(rgba(36, 1, 1, 0.774), rgba(32, 4, 4, 0.733)),
+    url("/about-crop.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.why-h1 {
+  background: linear-gradient(rgba(36, 1, 1, 0.774), rgba(32, 4, 4, 0.733)),
+    url("/why-crop.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.contact-h1 {
+  background: linear-gradient(rgba(36, 1, 1, 0.774), rgba(32, 4, 4, 0.733)),
+    url("/contact-crop.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.upper-i i {
+  transition: color 0.3s ease-in-out;
+}
+
+.upper-i i:hover {
+  color: white;
+}
+/* .about-h1-h1 {
+  border-bottom: 5px solid red;
+  width: 8%;
+  margin: auto;
+  padding-bottom: 6px;
+  display: inline;
+} */

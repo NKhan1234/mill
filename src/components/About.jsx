@@ -1,80 +1,67 @@
-import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Link } from "react-router-dom";
+import { useGSAP } from "@gsap/react";
+
 gsap.registerPlugin(ScrollTrigger);
-import { useState } from "react";
 
 export default function About() {
-  const [showmore, setShowmore] = useState(false);
-  const handleMore = () => {
-    setShowmore(!showmore);
-  };
-  const tl = gsap.timeline();
   useGSAP(() => {
-    tl.from(".about-h1", {
-      x: -40,
-      opacity: 0,
-      duration: 1,
-      ease: "power1.in",
+    const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".about",
         start: "top center",
         end: "top 30%",
         scrub: 2,
       },
+    });
+
+    tl.from(".about-h1-h1", {
+      x: -40,
+      opacity: 0,
+      duration: 1,
+      ease: "power1.in",
     })
       .from(".about-p", {
-        text: {
-          value: "",
-        },
+        opacity: 0,
         duration: 3,
         ease: "power1.in",
-        scrollTrigger: {
-          trigger: ".about",
-          start: "top center",
-          end: "top 30%",
-          scrub: 2,
-        },
       })
       .from(".btn1", {
         y: 40,
-        text: {
-          value: "",
-        },
-        duration: 2,
         opacity: 0,
+        duration: 2,
         ease: "power1.in",
-        scrollTrigger: {
-          trigger: ".about",
-          start: "top center",
-          end: "top 30%",
-          scrub: 2,
-        },
       });
   });
 
   return (
     <>
-      <div className="about w-full h-full bg-white px-[10%] py-[120px]">
-        <div className="">
-          <h1 className="about-h1 text-center text-4xl font-semibold tracking-wide">
+      <div className="about w-full h-full bg-white px-[5%] sm:px-[5%] py-[40px] md:py-[70px] md:px-[10%]">
+        <div>
+          <h1 className="about-h1-h1 text-center text-xl sm:text-3xl font-semibold md:text-4xl font-bold tracking-wide">
             About Us
           </h1>
         </div>
         <div className="grid items-center justify-center">
-          <div className="">
-            <p className="about-p text-lg text-center mt-8 mb-6">
-              {showmore
-                ? "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis in ut omnis accusantium deleniti natus porro fugiat exercitationem repudiandae molestias! Molestias, dolorem reiciendis Accusantium provident odit nulla laboriosam iste laudantium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi quod doloremque quidem necessitatibus ducimus ad esse culpa blanditiis, placeat ab, voluptas aliquid dolores, fugiat soluta debitis nobis eius ipsum commodi neque at aperiam Officiis.Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis in ut omnis accusantium deleniti natus porro fugiat exercitationem repudiandae molestias! Molestias, dolorem reiciendis Accusantium provident odit nulla laboriosam iste laudantium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi quod doloremque quidem necessitatibus ducimus ad esse culpa blanditiis, placeat ab, voluptas aliquid dolores, fugiat soluta debitis nobis eius ipsum commodi neque at aperiam Officiis."
-                : "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis in ut omnis accusantium deleniti natus porro fugiat exercitationem repudiandae molestias! Molestias, dolorem reiciendis Accusantium provident odit nulla laboriosam iste laudantium.Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis in ut omnis accusantium deleniti natus porro fugiat exercitationem repudiandae molestias! Molestias, dolorem reiciendis Accusantium provident odit nulla laboriosam iste laudantium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi quod doloremque quidem necessitatibus ducimus ad esse culpa blanditiis, placeat ab, voluptas aliquid dolores, fugiat soluta debitis nobis eius ipsum commodi neque at aperiam Officiis."}
+          <div>
+            <p className="about-p text-sm md:text-lg text-center mt-4 sm:mt-8 mb-3 sm:mb-6">
+              &quot;Founded in 1984, Our Rice Mill embarked on a mission to
+              bring innovation, efficiency, and quality to the rice industry.
+              Its journey reflects a commitment to integrating various aspects
+              of rice processing, distribution, and sustainability, transforming
+              the business from a small, locally-focused mill into a major
+              player in the global rice market. Here is the comprehensive
+              history of Our Rice Mill, detailing its milestones and impact on
+              the industry over the years:&quot;
             </p>
           </div>
-          <button
-            onClick={handleMore}
-            className="btn1 inline w-[15%] m-auto px-8 py-4 outline-none border-none bg-red-400 text-white text-md"
+          <Link
+            to="/about"
+            className="btn1 inline-block m-auto px-4 py-2 md:px-8 md:py-4 outline-none border-none bg-red-700 text-white text-sm sm:text-md"
           >
-            {showmore ? "Show Less" : "Know More"}
-          </button>
+            Know More
+          </Link>
         </div>
       </div>
     </>

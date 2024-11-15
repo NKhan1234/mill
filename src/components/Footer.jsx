@@ -42,41 +42,52 @@ export default function Footer() {
   };
 
   return (
-    <div className="footer grid justify-center gap-y-8 px-[5%] py-[50px] bg-red-400 text-white">
-      <div className="flex  justify-between gap-x-36">
-        <div className="grid gap-y-4 leading-7">
-          <img src="/mill1.jpg" alt="" className="w-[200px]" />
+    <div className="footer grid justify-center gap-y-8 px-[5%] py-[50px] bg-red-400 text-white ">
+      <div className="flex justify-between gap-y-8 flex-col-reverse md:flex-row gap-x-12 lg:gap-x-24 xl:gap-x-36">
+        <div className="grid gap-y-4 lg:gap-y-2 leading-7">
           <div className="">
-            <p className="text-xl tracking-wide">
-              Founded in 1984, Our Rice Mills set out with an ambitious goal to
+            <p className="text-sm sm:text-md lg:text-lg tracking-wide">
+              Founded in 1984, Our Rice Mill set out with an ambitious goal to
               bring together and advance various facets of the rice industry.
+            </p>
+          </div>
+          <div className="flex items-center gap-x-8">
+            <p>
+              <i className="ri-facebook-fill social p-2 text-xl md:text-2xl md:p-3 rounded-full border-2 border-solid border-white text-white "></i>
+            </p>
+            <p>
+              <i className="ri-whatsapp-fill social p-2 text-xl md:text-2xl md:p-3 rounded-full border-2 border-solid border-white text-white"></i>
             </p>
           </div>
         </div>
         <div className="">
           <div className="">
-            <h2 className="text-2xl font-bold inline-flex mb-4">Products</h2>
+            <h2 className="sm:text-lg lg:text-2xl font-bold inline-flex mb-4">
+              Products
+            </h2>
           </div>
           <div className="grid gap-y-4">
-            <p className="text-lg">Brown Rice</p>
-            <p className="text-lg">White Rice</p>
-            <p className="text-lg">Sream Rice</p>
-            <p className="text-lg">Prebolied Rice</p>
+            <p className="text-sm sm:text-sm lg:text-lg">Brown Rice</p>
+            <p className="text-sm sm:text-sm lg:text-lg">White Rice</p>
+            <p className="text-sm sm:text-sm lg:text-lg">Sream Rice</p>
+            <p className="text-sm sm:text-sm lg:text-lg">Prebolied Rice</p>
           </div>
         </div>
         <div className="">
           <div className="">
-            <h2 className="text-2xl font-bold inline-flex mb-4">Category</h2>
+            <h2 className="sm:text-lg lg:text-2xl font-bold inline-flex mb-4">
+              Category
+            </h2>
           </div>
           <div className="grid gap-y-4">
-            <p className="text-lg">Basmati Rice</p>
-            <p className="text-lg">Sella Rice</p>
-            <p className="text-lg">Non Basmati Rice</p>
+            <p className="text-sm sm:text-sm lg:text-lg">Basmati Rice</p>
+            <p className="text-sm sm:text-sm lg:text-lg">Sella Rice</p>
+            <p className="text-sm sm:text-sm lg:text-lg">Non Basmati Rice</p>
           </div>
         </div>
         <div className="">
           <div className="">
-            <h2 className="text-2xl font-bold inline-flex mb-4">
+            <h2 className="sm:text-lg lg:text-2xl font-bold inline-flex mb-4">
               Contact Detail
             </h2>
           </div>
@@ -100,7 +111,7 @@ export default function Footer() {
                 <span>
                   <i className="ri-map-pin-line"></i>
                 </span>{" "}
-                Tiwana Rice mill, Rudrapur, Uttarakhand, India
+                Durga Enterprises, Rudrapur, Uttarakhand, India
               </p>
             </div>
           </div>
@@ -108,17 +119,17 @@ export default function Footer() {
       </div>
       <hr className="w-full h-[1px] bg-red-400 m-0 p-0" />
 
-      <div className="relative">
-        <h3 className="text-center text-xl font-medium tracking-wide">
+      <div className="">
+        <h3 className="text-center text-sm sm:text-xl font-medium tracking-wide">
           Copyright{" "}
           <span>
             <i className="ri-copyright-line"></i>
           </span>{" "}
-          2024 Tiwana Rice Mills. All Rights Reserved{" "}
+          2024 Durga Enterprises. All Rights Reserved{" "}
         </h3>
         {show && (
-          <p onClick={scrollTop} className="fixed bottom-12 right-10">
-            <i className="ri-arrow-up-line w-[35px] h-[35px] shadow-2xl rounded-t-xl text-xl bg-white text-red-400 p-4"></i>
+          <p onClick={scrollTop} className="fixed bottom-12 right-10 upper-i">
+            <i className="ri-arrow-up-line  w-[30px] h-[35px] shadow-3xl text-2xl bg-stone-700 text-red-400 p-3"></i>
           </p>
         )}
       </div>
